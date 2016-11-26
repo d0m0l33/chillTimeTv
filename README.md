@@ -1,7 +1,16 @@
 # chillTimeTv
 Tv Shows - Episode guide, notifications, user blogs 
 
-Stack : AngularJs frontend, python django backend
+Full Stack : AngularJs frontend, python django backend, Sql lite database
+
+Pulling tv show data from themoviedb database : 
+https://www.themoviedb.org/
+
+Api wrapper used :
+https://github.com/cavestri/themoviedb-javascript-library
+
+
+Setting up -->
 
 1) Clone repo
 
