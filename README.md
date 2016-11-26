@@ -1,6 +1,8 @@
 # chillTimeTv
 Tv Shows - Episode guide, notifications, user blogs 
 
+Stack : AngularJs frontend, python django backend
+
 1) Clone repo
 
 2) Set up a virtual environment : https://virtualenv.pypa.io/en/stable/
