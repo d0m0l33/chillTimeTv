@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>demoDjango 1.0</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+<!-- Latest compiled and minified CSS -->
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> 
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-cookies.js"></script>
+
+<script src="{% static 'tvShows/js/affiliates.js' %}"></script>
+
+<script src="{% static 'tvShows/js/themoviedb.js' %}"></script>
+<script src="{% static 'tvShows/js/main.js' %}"></script>
+<script src="{% static 'tvShows/js/tvDetails.js' %}"></script>
+
+
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'tvShows/css/mystyle.css' %}" type = "text/css"/>
+  <link href='https://fonts.googleapis.com/css?family=Slabo+27px|Poiret+One' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="/">chillTime|Tv</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/blog">Blog</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+   {% block content %}
+   {% endblock %}
+
+
+
+
+
+
+
+ 
+</body>
+
+
+	<footer style="margin-top:">
+		<div class="section_footer" style="padding:30px">
+      <div class="row">
+        <div class="col-xs-6 col-sm-6 col-med-4 col-lg-4">
+          chillTime.com
+        </div>
+        <div class="col-xs-6 col-sm-6 col-med-4 col-lg-4">
+          <span class="glyphicon glyphicon-copyright-mark"></span>
+          ChillTime
+        </div>
+      </div>
+      <div class="row">
+         <div class="col-xs-6 col-sm-6 col-med-4 col-lg-4">
+          chillTime | chillTimeMovies | chillTimeTv
+        </div>
+        <div class="col-xs-6 col-sm-6 col-med-4 col-lg-4">
+          about | blog | contact
+        </div>
+      </div>
+
+		</div>
+	</footer>
+
+
+
+
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+
+<!-- insert this code on whichever page you want to get the affiliate data and set the cookie for it(index page for example) -->
+<!--<script src="{% static 'tvShows/js/affiliates.js' %}"></script>
+
+
+<script type="text/javascript" language="JavaScript">
+
+var affiliateString;
+var affiliateID;
+
+
+var questionlocation = location.href.indexOf('?');
+if(questionlocation > 0) 
+{
+   affiliateString = location.href.substr(questionlocation + 1);
+   if(isAffiliateId(_idName,affiliateString))
+   {
+      affiliateID = getID(affiliateString);
+      console.log("AffiliateID = ",affiliateID);
+      SetCookie(_idName, affiliateID, 90);
+   }
+}
+
+ // Checks url for valid affiliate string
+ function isAffiliateId (idName,affiliate)
+ {
+
+    var equalSignLocation;
+
+    equalSignLoacation = affiliate.indexOf('=');
+    if(affiliate.substring(0,equalSignLoacation) == idName)
+    {
+      return true
+    }
+    else
+    {
+      console.log("not a valid id");
+      return false
+    }
+ }
+
+
+ // extracts unique afiliate id from affiliate string in url
+ function getID(affiliate){
+
+    var equalSignLocation;
+    equalSignLocation = affiliate.indexOf('=');
+    id = affiliate.substr(equalSignLocation + 1);
+    return id;
+ }
+</script>-->
+

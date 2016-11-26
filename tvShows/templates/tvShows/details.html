@@ -1,0 +1,77 @@
+{% extends "tvShows/header.html" %}
+{% load staticfiles %}
+
+
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'tvShows/css/bootstrap.min.css' %}" type = "text/css"/>
+
+<div ng-app="invoice1">
+<div ng-controller="DetailsController as details">
+ 
+
+    {%verbatim%}
+    <div class="row" style="padding:20px">
+      <div class="col-xs-12 col-sm-12 col-med-4 col-lg-4" style="margin-top:65px">
+        <img id="" ng-src="{{imagePath}}{{backdrop}}">
+      </div>
+      <div class="col-xs-12 col-sm-12 col-med-4 col-lg-4" style="margin-top:20px">
+      <h1 class="page_titles">  {{title}} </h1>
+          <p class="overview"> {{overview}} <p>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-med-4 col-lg-4" style="margin-top:20px">
+      <h1 class="page_titles">  Seasons <br> {{seasonNum}} </h1>
+    </div>
+     <div class="col-xs-12 col-sm-12 col-med-4 col-lg-4" style="margin-top:20px">
+      <h1 class="page_titles">  Rating <br>{{rating}}</h1>
+    </div>
+    </div>
+
+
+
+  <div class="section_details">
+    <div class="row" style="margin-top:20px;">
+    <div class="col-xs-3 col-sm-2 col-med-4 col-lg-1" ng-repeat="season in seasons" style="padding:20px;">
+      <button type="button" class="btn btn-default" d="{{season.season_number}}"ng-click="update_season(season.season_number)">Season {{season.season_number}}</button>   
+    </div>
+    </div>
+    <hr>
+
+    <div class="episode_block">
+    <div class="row" style="margin-top:20px;">
+    <div class="col-xs-12 col-sm-12 col-med-12 col-lg-4">
+        <div class="episode_buttons">
+              <h2> Episodes </h2>
+              <div class="row">
+              <div class="col-xs-2 col-sm-1 col-med-12 col-lg-2" ng-repeat="episode in episodes">
+                <button type="button" class="btn btn-default btn-circle btn-xl" id="{{episode.episode_number}}"ng-click="update_episode(episode.episode_number)">{{episode.episode_number}}</button>
+              </div>
+              </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-med-12 col-lg-4">
+        <img id="" ng-src="{{imagePath}}{{episode_image}}" style="margin-top:40px">
+    </div>
+    <div class="col-xs-12 col-sm-12 col-med-12 col-lg-4">
+          <h2> episode {{activeEpisode + 1}} <h2>
+          <h3>{{episode_title}}<h3>
+          <p class="overview"> {{episode_summary}} <p>
+    </div>
+
+    </div>
+    </div>
+
+  </div>
+
+
+    </div>
+    </div>
+    {%endverbatim%}
+
+
+
+
+
+
+{% endblock %}

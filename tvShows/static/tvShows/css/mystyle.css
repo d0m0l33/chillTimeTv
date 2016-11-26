@@ -1,0 +1,251 @@
+
+  
+
+
+	     .row{
+			font-family: 'Poiret One', cursive;
+			font-size:;
+	     }
+
+		.btn{
+	     	margin-top:10px;
+	     }
+
+	     .btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+
+
+	     .page_titles{
+
+	     	margin-top: 80px;
+	     	    text-align: center;
+
+	     }
+
+	     .overview{
+
+	     	font-size: 18px;
+	     }
+
+       .navbar {
+       	background: rgba(255, 255, 255, 0.5);
+
+       }
+
+
+
+
+
+		
+		.section_1 {
+
+			height:720px;
+		    background: url( "/static/personal/img/apple_desktop.jpg" ) no-repeat center center fixed;
+		    background-size: cover;
+		    opacity:  ;
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    text-align: center;
+		}
+		.section_2 {
+
+			height:1540px;
+			text-align: center;
+			background: #B899EF;
+		    background-size: cover;
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    text-align: center;
+
+		}
+
+		.section_3 {
+
+			height:720px;
+		    background: url( "/static/personal/img/startup_office.jpg" ) no-repeat center center fixed;
+		    background-size: cover;
+		    opacity:  ;
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    text-align: center;
+
+		}
+
+		.section_4 {
+
+			height:720px;
+		    background: url( "/static/personal/img/nvidia_5.jpg" ) no-repeat center center fixed;
+		    background-size: cover;
+		    opacity:  ;
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    text-align: center;
+
+		}
+
+		.section_projects {
+
+			height:720px;
+		    background: #A7F37C;
+		    background-size: cover;
+		    opacity:  ;
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+
+
+		}
+
+
+
+		.section_confirm {
+
+			height:720px;
+		    background: #F3B77C;
+		    background-size: cover;
+		    opacity:  ;
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+
+
+		}
+
+		.section_form {
+
+			height:720px;
+		    background: #7CC3F3;
+		    background-size: cover;
+		    opacity:  .60;
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+
+
+		}
+
+		.section_TopTv {
+
+			height:720px;
+		    background: url( "/static/personal/img/the_flash_cw-wallpaper-1280x800.jpg" ) no-repeat center center fixed;
+		    background-size: cover;
+		    opacity:  ;
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    text-align: center;
+
+		}
+
+		.section_details {
+
+		height:1020px;
+		background: #F3B77C;
+	    background-size: cover;
+	    opacity:  ;
+	    -webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    text-align: center;
+	    overflow: ;
+
+	}
+
+		.section_footer {
+
+			height:200px;
+			text-align: center;
+			background: #B899EF;
+		    background-size: cover;
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    text-align: center;
+
+		}
+
+		.section_details_top {
+
+			height:420px;
+		    background: url( "/static/personal/img/justice_league_2017_movie-wallpaper-tint-1280x800.jpg" ) no-repeat center center fixed;
+		    background-size: cover;
+		    opacity:  ;
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    text-align: center;
+
+		}
+
+
+
+
+
+		.img_con{
+
+
+			width:500px;
+			height:500px;
+		}
+
+
+		.img3{
+
+			width:100%;
+			height: auto;
+
+		}
+
+		.click_image {
+   			opacity: 1.0;
+    		filter: alpha(opacity=100); /* For IE8 and earlier */
+		}
+		.click_image:hover {
+   			 opacity: 0.6;
+   		 	 filter: alpha(opacity=50); /* For IE8 and earlier */
+		}
+
+		.custom_load_btn{
+
+			opacity: 1.0;
+    		filter: alpha(opacity=100); /* For IE8 and earlier */
+		}
+
+		.custom_load_btn:hover {
+   			 opacity: 0.6;
+   		 	 filter: alpha(opacity=50); /* For IE8 and earlier */
+		}
+
+
+		
+
+		footer{
+
+			background: black;
+		}
+
+
+.thumb {position: relative; width: 510px; height: 300px;}
+.thumb a {position: absolute; top: 0; display: block; width: 100%; height: 100%; text-align: center; text-decoration: none;}
+.thumb a .play, .thumb a .overlay {opacity: 0;}
+.thumb a:hover .play, .thumb a:hover .overlay {display: block; transition: opacity .25s ease-in-out;-moz-transition: opacity .25s ease-in-out;-webkit-transition: opacity .25s ease-in-out;}
+.thumb a:hover .play {position: relative; font-size: 64px; color: #ffffff; margin-top: 60px; z-index: 1000; opacity: 1;}
+.thumb a:hover .overlay {position: absolute; top: 0; width: 100%; height: 100%; background-color: #000000; opacity: .7;}
+
+
+
+
+
+
+
+

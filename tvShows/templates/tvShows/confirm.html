@@ -1,0 +1,49 @@
+{% extends "tvShows/header.html" %}
+{% load staticfiles %}
+
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'tvShows/css/bootstrap.min.css' %}" type = "text/css"/>
+<link rel="stylesheet" href="{% static 'tvShows/css/mystyle.css' %}" type = "text/css"/>
+
+
+<!-- insert this code on any confirmation page to see which affiliate contributed to the user transaction -->
+<script src="{% static 'tvShows/js/affiliates.js' %}"></script>
+<script type="text/javascript" language="JavaScript">
+
+console.log("Confirm pageeee");
+var AffiliateID = ReadCookie(_idName);
+console.log(AffiliateID);
+if(AffiliateID.length > 0) {
+	console.log("Confirmation! AffiliateID = ",AffiliateID);
+	}
+else{
+	console.log("No affiliate found");
+}
+</script>
+
+
+<div class="section_confirm">
+
+<div class="container">
+<div class="row" style="margin-top:100px">
+<div class="col-sm-12 col-md-12 col-lg-12">
+
+
+    {% for c in content%}
+	   <h2>{{c}}</h2>
+	{% endfor %}
+
+</div>
+</div>
+</div>
+
+
+
+</div>
+
+
+
+
+{% endblock %}

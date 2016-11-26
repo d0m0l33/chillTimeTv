@@ -1,0 +1,51 @@
+{% extends "tvShows/header.html" %}
+{% load staticfiles %}
+
+
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'tvShows/css/bootstrap.min.css' %}" type = "text/css"/>
+
+<div ng-app="invoice1" style="margin-bottom:100px;">
+  <div ng-controller="InvoiceController as invoice">
+
+    {%verbatim%}
+        <div class="row" style="margin-left:5px;margin-top:80px;">
+        <div class="col-xs-6 col-sm-3 col-med-3 col-lg-4">
+          <button type="button" class="btn btn-default btn-circle btn-xl" id="" ng-click=""><span class="glyphicon glyphicon-sunglasses"></span></button>
+          <button type="button" class="btn btn-default btn-circle btn-xl" id="" ng-click=""><span class="glyphicon glyphicon-fire"></span></button>
+          <button type="button" class="btn btn-default btn-circle btn-xl" id="" ng-click=""><span class="glyphicon glyphicon-time"></span></button>
+          <button type="button" class="btn btn-default btn-circle btn-xl" id="" ng-click=""><span class="glyphicon glyphicon-search"></span></button>
+       </div>
+     </div> 
+
+
+
+    <div class="row" style="margin:5px;">
+      <h1 class="page_titles"> {{title}} </h1>
+      <div ng-repeat="l in list"> 
+        <div style="margin-top:10px;" class="col-xs-6 col-sm-3 col-med-3 col-lg-2">
+        <img class="click_image" id="{{l.name}}" ng-click="details_page(l.name)" ng-src="{{imagePath}}{{l.poster_path}}">
+      </div>
+    </div>
+
+    <div style="margin-top:10px;" class="col-xs-12 col-sm-12 col-med-12 col-lg-8">
+    <div class="custom_load_btn" style="background:#F3B77C;height:272px;width:100%;display:inline-block;">
+      <h2 style="margin-top:100px;text-align: center;">More Top Tv Shows...</h2>
+    </div>
+    </div>
+  </div>
+
+
+
+
+    {%endverbatim%}
+
+  </div>
+</div>
+
+{% endblock %}
+
+
+

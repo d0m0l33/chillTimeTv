@@ -1,0 +1,20 @@
+{% extends "tvShows/header.html" %}
+{% load staticfiles %}
+
+
+	{% block content %}
+
+	<link rel="stylesheet" href="{% static 'tvShows/css/bootstrap.min.css' %}" type = "text/css"/>
+	<link rel="stylesheet" href="{% static 'tvShows/css/mystyle.css' %}" type = "text/css"/>
+
+	<div class="row section_2">
+
+
+	    {% for c in content%}
+		   <p>{{c}}</p>
+		{% endfor %}
+
+	</div>
+
+	{% endblock %}
+

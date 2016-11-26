@@ -1,0 +1,44 @@
+{% extends "tvShows/header.html" %}
+{% load staticfiles %}
+{% load bootstrap %}
+
+
+
+
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'tvShows/css/bootstrap.min.css' %}" type = "text/css"/>
+<link rel="stylesheet" href="{% static 'tvShows/css/mystyle.css' %}" type = "text/css"/>
+
+<div class="section_form">
+
+
+
+<div class="container" >
+<div class="row" style="margin-top:60px;">
+<div class="col-sm-12 col-md-2 col-lg-2">
+
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form|bootstrap }}
+      <input type="submit" value="Submit" /> 
+	  
+</form>
+
+</div>
+</div>
+</div>
+
+<!--<div class="col-lg-6">
+
+<div class="input-group">
+	  <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+	  <span class="input-group-addon" id="basic-addon2">@example.com</span>
+	  </div>
+
+</div>-->
+</div>
+
+{% endblock %}
