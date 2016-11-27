@@ -9,6 +9,9 @@ https://www.themoviedb.org/
 Api wrapper used :
 https://github.com/cavestri/themoviedb-javascript-library
 
+Ideal project layout : 
+http://www.revsys.com/blog/2014/nov/21/recommended-django-project-layout/
+
 
 Setting up -->
 
