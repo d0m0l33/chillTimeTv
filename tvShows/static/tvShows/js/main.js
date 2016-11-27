@@ -1,7 +1,7 @@
 
-var invoice = angular.module('invoice1', ['tvShows','ngCookies']);
+var main = angular.module('main', ['tvShows','ngCookies']);
 
-invoice.controller('InvoiceController', ['tvDetails','$rootScope','$scope','$window','$location','$cookies', function(tvDetails,$rootScope,$scope,$window,$location,$cookies) {
+main.controller('MainController', ['tvDetails','$rootScope','$scope','$window','$location','$cookies', function(tvDetails,$rootScope,$scope,$window,$location,$cookies) {
 
 
  $scope.title = "Top Rated Tv Shows"
@@ -41,7 +41,7 @@ invoice.controller('InvoiceController', ['tvDetails','$rootScope','$scope','$win
 }]);
 
 
-invoice.controller('DetailsController', ['tvDetails','$rootScope','$scope','$window','$location','$cookies', function(tvDetails,$rootScope,$scope,$window,$location,$cookies) {
+main.controller('DetailsController', ['tvDetails','$rootScope','$scope','$window','$location','$cookies', function(tvDetails,$rootScope,$scope,$window,$location,$cookies) {
 
 
   $window.onload = function() {
