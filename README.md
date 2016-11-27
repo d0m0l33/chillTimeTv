@@ -19,5 +19,5 @@ Setting up -->
 3) Cd to root directory. Install required packages : "pip install -r requirements.txt" 
 (currently using python 2.7)
 
-4) run : "python manage.y runserver"
+4) run : "python manage.py runserver"
 
