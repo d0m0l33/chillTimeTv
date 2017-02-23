@@ -16,26 +16,21 @@ angular.module('tvShows', [])
    theMovieDb.common.timeout = 2000;
 
 
- function get_episodes(){
-
-  return episodes;
-
- }
+  function get_episodes(){
+   return episodes;
+  }
 
 
- function load_top_shows(){
+  function load_top_shows(){
+      theMovieDb.tv.getTopRated({}, successTS, errorTS)
+  }
 
-     theMovieDb.tv.getTopRated({}, successTS, errorTS)
+  function successTS(data) {
 
- }
-
- function successTS(data) {
-
-      realData = JSON.parse(data);
-      topShows = realData["results"];
-      //console.log(topShows);
-      $rootScope.$emit('updatedTopShows',this.list);
-  };
+       realData = JSON.parse(data);
+       topShows = realData["results"];
+       $rootScope.$emit('updatedTopShows',this.list);
+   };
 
 
   function errorTS(data) {
@@ -43,19 +38,15 @@ angular.module('tvShows', [])
     }; 
 
 
-  function get_list() {
-
+  function get_popular_list() {
    theMovieDb.tv.getPopular({"id":1396}, successCB, errorCB);
-
   }
 
-  get_list();
+  get_popular_list();
 
    function successCB(data) {
-
       realData = JSON.parse(data);
       this.list = realData["results"];
-      //console.log(this.list);
       $rootScope.$emit('updatedList',this.list);
   };
 
@@ -66,7 +57,6 @@ angular.module('tvShows', [])
 
 
   function load_season(){
-    //console.log(season);
       theMovieDb.tvSeasons.getById({"id":showID, "season_number": season}, successSn, errorSn)
   }
   
@@ -79,8 +69,6 @@ angular.module('tvShows', [])
 
   function errorSn(data) {
      $rootScope.$emit('updatedEps',episodes);
-     //console.log("Season limit ... " + data);
-     //console.log("Error callback: " + data);
     };
 
 
@@ -146,11 +134,9 @@ angular.module('tvShows', [])
 
 
 function detailsCache(key,value){
-
   var now = new Date(),
 
   exp = new Date(now.getFullYear(), now.getMonth()+1, now.getDate());
-
   $cookies.put(key,value,{
     path:"/",
     expires: exp
@@ -165,7 +151,7 @@ function detailsCache(key,value){
     get_backdrop:get_backdrop,
     get_over:get_over,
     get_rating:get_rating,
-    get_list:get_list,
+    get_popular_list:get_popular_list,
     get_id:get_id,
     load_season:load_season,
     get_episodes:get_episodes,

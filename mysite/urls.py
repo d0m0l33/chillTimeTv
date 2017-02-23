@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 from django.contrib import admin
 
 
@@ -24,6 +24,4 @@ urlpatterns = [
     url(r'^webapp/', include('webapp.urls')),
     url(r'^', include('tvShows.urls')),
     url(r'^blog/', include('blog.urls')),
-
-
 ]

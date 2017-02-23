@@ -15,11 +15,10 @@ main.controller('MainController', ['tvDetails','$rootScope','$scope','$window','
      $scope.$apply();
 
   });
-  //console.log("On page reload :",$cookies.get("title"));
-
  }; 
 
 
+ /* generate movie details page for a single movie. Takes a movie id and cashes the movie attributes, to be used on the movie page */
   $scope.details_page = function(id){
 
     var desc_image = tvDetails.get_backdrop($scope.list,id); 
@@ -27,18 +26,17 @@ main.controller('MainController', ['tvDetails','$rootScope','$scope','$window','
     var desc_rating = tvDetails.get_rating($scope.list,id);
     var desc_id = tvDetails.get_id($scope.list,id);
 
-
     tvDetails.detailsCache('title',id);
     tvDetails.detailsCache('backdrop',desc_image);
     tvDetails.detailsCache('overview',desc_summary);
     tvDetails.detailsCache('rating',desc_rating);
     tvDetails.detailsCache('showID',desc_id);
-
     window.location.href = "/details/"+id;
   }
 
 
 }]);
+
 
 
 main.controller('DetailsController', ['tvDetails','$rootScope','$scope','$window','$location','$cookies', function(tvDetails,$rootScope,$scope,$window,$location,$cookies) {
@@ -50,6 +48,7 @@ main.controller('DetailsController', ['tvDetails','$rootScope','$scope','$window
 
   };
 
+  /* Obtain movie attributes previously cashed and display them on the moive details page */
   $scope.imagePath = theMovieDb.common["images_uri"];
   $scope.title = $cookies.get("title");
   $scope.backdrop = $cookies.get("backdrop");
@@ -68,14 +67,10 @@ main.controller('DetailsController', ['tvDetails','$rootScope','$scope','$window
 
     $scope.seasons = data;
     $scope.seasonNum = data.length;
-    //console.log("seasons",data);
     $scope.episodes = data[$scope.activeSeason]["episodes"];
     $scope.episode_image = $scope.episodes[$scope.activeEpisode]["still_path"];
     $scope.episode_summary = $scope.episodes[$scope.activeEpisode]["overview"];
     $scope.episode_title = $scope.episodes[$scope.activeEpisode]["name"];
-   // console.log("episodes",$scope.episodes);
-   // console.log("image",$scope.episode_image);
-   // console.log("summary",$scope.episode_summary);
     $scope.$apply();
 
   });
@@ -86,14 +81,12 @@ main.controller('DetailsController', ['tvDetails','$rootScope','$scope','$window
     $scope.episodes = $scope.seasons[$scope.activeSeason]["episodes"];
     $scope.activeEpisode = 0;
     update_episode_view($scope.activeSeason,$scope.activeEpisode);
-    //console.log($scope.activeSeason);
   }
 
   $scope.update_episode = function(number){
 
     $scope.activeEpisode = number - 1;
     update_episode_view($scope.activeSeason,$scope.activeEpisode);
-    //console.log($scope.activeEpisode);
   }
 
   function update_episode_view(seasonNum,episodeNum){
