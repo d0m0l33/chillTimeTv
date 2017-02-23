@@ -3,7 +3,6 @@ var main = angular.module('main', ['tvShows','ngCookies']);
 
 main.controller('MainController', ['tvDetails','$rootScope','$scope','$window','$location','$cookies', function(tvDetails,$rootScope,$scope,$window,$location,$cookies) {
 
-
  $scope.title = "Top Rated Tv Shows"
  $scope.title2 = "Popular Tv Shows"
  $scope.imagePath = theMovieDb.common["images_uri"];
@@ -37,10 +36,7 @@ main.controller('MainController', ['tvDetails','$rootScope','$scope','$window','
 
 }]);
 
-
-
 main.controller('DetailsController', ['tvDetails','$rootScope','$scope','$window','$location','$cookies', function(tvDetails,$rootScope,$scope,$window,$location,$cookies) {
-
 
   $window.onload = function() {
     $scope.activeEpisode = 0;
