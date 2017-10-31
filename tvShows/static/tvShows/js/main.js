@@ -17,7 +17,7 @@ main.controller('MainController', ['tvDetails','$rootScope','$scope','$window','
  }; 
 
 
- /* generate movie details page for a single movie. Takes a movie id and cashes the movie attributes, to be used on the movie page */
+ /* generate movie details page for a single movie. Takes a movie id and caches the movie attributes, to be used on the movie page */
   $scope.details_page = function(id){
 
     var desc_image = tvDetails.get_backdrop($scope.list,id); 
@@ -44,7 +44,7 @@ main.controller('DetailsController', ['tvDetails','$rootScope','$scope','$window
 
   };
 
-  /* Obtain movie attributes previously cashed and display them on the moive details page */
+  /* Obtain movie attributes previously cached and display them on the moive details page */
   $scope.imagePath = theMovieDb.common["images_uri"];
   $scope.title = $cookies.get("title");
   $scope.backdrop = $cookies.get("backdrop");
